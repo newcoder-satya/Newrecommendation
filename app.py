@@ -16,8 +16,8 @@ def decompress_pickle(file):
  data = cPickle.load(data)
  return data
  
-with open("vectorizer.pbz2",'rb') as fs:
-    tfidf_matrix = decompress_pickle(fs)
+
+tfidf_matrix = decompress_pickle("vectorizer.pbz2")
 
 data = pd.read_csv("News.csv")
 data = data.head(9000)
