@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News recommendation system</title>
+</head>
+<body>
+    <form action="/predict" method="post">
+        <!-- Inside your index.html -->
+        <label>news:</label>
+        <input type="string" name="News"><br><br>
+
+        
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h1>Recommended News : </h1>
+    {% for pred in prediction %}
+    <h2>{{pred}}</h2>
+    {% endfor %}
+</body>
+</html>
